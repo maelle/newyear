@@ -44,7 +44,7 @@ save(measurements, file = "data/4th_july.RData")
 
 
 mintime <- lubridate::ymd_hms("2016 07 04 17 00 00")
-maxtime <- lubridate::ymd_hms("2016 07 05 05 00 00")
+maxtime <- lubridate::ymd_hms("2016 07 05 07 00 00")
 
 measurements <- filter(measurements, 
                        hour >= mintime)
@@ -85,5 +85,5 @@ plotMap <- ggmap(usmap)+ theme_bw()+
   theme(plot.title = element_text(lineheight=1, face="bold"))
 
 ani.options(interval = 1, ani.width = 800, ani.height = 800)
-file.remove("videos/map_4th.mp4")
-gg_animate(plotMap, "videos/map_4th.mp4")
+file.remove("videos/map_4th.gif")
+gg_animate(plotMap, "videos/map_4th.gif")
