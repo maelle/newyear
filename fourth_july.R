@@ -84,6 +84,6 @@ plotMap <- ggmap(usmap)+ theme_bw()+
           subtitle = "New York local time. Data accessed from OpenAQ via ropenaq.") +
   theme(plot.title = element_text(lineheight=1, face="bold"))
 
-ani.options(interval = 1, ani.width = 800, ani.height = 800)
+ani.options(interval = 0.5, ani.width = 800, ani.height = 800)
 file.remove("videos/map_4th.gif")
 gg_animate(plotMap, "videos/map_4th.gif")
